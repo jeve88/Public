@@ -1,0 +1,122 @@
+{
+  "version": 3,
+  "targets": {
+    "net6.0-windows7.0": {
+      "ClassLibraryAscenseur/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/ClassLibraryAscenseur.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ClassLibraryAscenseur.dll": {}
+        }
+      },
+      "WinFormsControlLibraryAscenseur/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "ClassLibraryAscenseur": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/WinFormsControlLibraryAscenseur.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/WinFormsControlLibraryAscenseur.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WindowsForms"
+        ]
+      }
+    }
+  },
+  "libraries": {
+    "ClassLibraryAscenseur/1.0.0": {
+      "type": "project",
+      "path": "../ClassLibraryAscenseur/ClassLibraryAscenseur.csproj",
+      "msbuildProject": "../ClassLibraryAscenseur/ClassLibraryAscenseur.csproj"
+    },
+    "WinFormsControlLibraryAscenseur/1.0.0": {
+      "type": "project",
+      "path": "../WinFormsControlLibraryAscenseur/WinFormsControlLibraryAscenseur.csproj",
+      "msbuildProject": "../WinFormsControlLibraryAscenseur/WinFormsControlLibraryAscenseur.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net6.0-windows7.0": [
+      "ClassLibraryAscenseur >= 1.0.0",
+      "WinFormsControlLibraryAscenseur >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\Stagiaire.CRM-UC-3931\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\Stagiaire.CRM-UC-3931\\Documents\\GitHub\\Public\\DesignPatternStateAscenseur\\WinFormsAscenseur\\WinFormsAscenseur.csproj",
+      "projectName": "WinFormsAscenseur",
+      "projectPath": "C:\\Users\\Stagiaire.CRM-UC-3931\\Documents\\GitHub\\Public\\DesignPatternStateAscenseur\\WinFormsAscenseur\\WinFormsAscenseur.csproj",
+      "packagesPath": "C:\\Users\\Stagiaire.CRM-UC-3931\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Stagiaire.CRM-UC-3931\\Documents\\GitHub\\Public\\DesignPatternStateAscenseur\\WinFormsAscenseur\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\Stagiaire.CRM-UC-3931\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net6.0-windows7.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net6.0-windows7.0": {
+          "targetAlias": "net6.0-windows",
+          "projectReferences": {
+            "C:\\Users\\Stagiaire.CRM-UC-3931\\Documents\\GitHub\\Public\\DesignPatternStateAscenseur\\ClassLibraryAscenseur\\ClassLibraryAscenseur.csproj": {
+              "projectPath": "C:\\Users\\Stagiaire.CRM-UC-3931\\Documents\\GitHub\\Public\\DesignPatternStateAscenseur\\ClassLibraryAscenseur\\ClassLibraryAscenseur.csproj"
+            },
+            "C:\\Users\\Stagiaire.CRM-UC-3931\\Documents\\GitHub\\Public\\DesignPatternStateAscenseur\\WinFormsControlLibraryAscenseur\\WinFormsControlLibraryAscenseur.csproj": {
+              "projectPath": "C:\\Users\\Stagiaire.CRM-UC-3931\\Documents\\GitHub\\Public\\DesignPatternStateAscenseur\\WinFormsControlLibraryAscenseur\\WinFormsControlLibraryAscenseur.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net6.0-windows7.0": {
+        "targetAlias": "net6.0-windows",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          },
+          "Microsoft.WindowsDesktop.App.WindowsForms": {
+            "privateAssets": "none"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

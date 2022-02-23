@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "ClassLibraryAscenseur/1.0.0": {
+        "runtime": {
+          "ClassLibraryAscenseur.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ClassLibraryAscenseur/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

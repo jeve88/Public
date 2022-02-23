@@ -1,0 +1,50 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "WinFormsAscenseur/1.0.0": {
+        "dependencies": {
+          "ClassLibraryAscenseur": "1.0.0",
+          "WinFormsControlLibraryAscenseur": "1.0.0"
+        },
+        "runtime": {
+          "WinFormsAscenseur.dll": {}
+        }
+      },
+      "ClassLibraryAscenseur/1.0.0": {
+        "runtime": {
+          "ClassLibraryAscenseur.dll": {}
+        }
+      },
+      "WinFormsControlLibraryAscenseur/1.0.0": {
+        "dependencies": {
+          "ClassLibraryAscenseur": "1.0.0"
+        },
+        "runtime": {
+          "WinFormsControlLibraryAscenseur.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "WinFormsAscenseur/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ClassLibraryAscenseur/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "WinFormsControlLibraryAscenseur/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

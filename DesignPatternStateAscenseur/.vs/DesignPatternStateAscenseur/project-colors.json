@@ -1,0 +1,26 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "7decab43-7802-40f9-b8f6-f8a371d6e7ed": {
+      "ProjectGuid": "7decab43-7802-40f9-b8f6-f8a371d6e7ed",
+      "DisplayName": "ClassLibraryAscenseur",
+      "ColorIndex": 0
+    },
+    "b80b0620-0036-4842-be1e-189a94613177": {
+      "ProjectGuid": "b80b0620-0036-4842-be1e-189a94613177",
+      "DisplayName": "WinFormsAscenseur",
+      "ColorIndex": 1
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Fichiers divers",
+      "ColorIndex": -1
+    },
+    "629260fa-5658-416b-955b-0c10b680d53c": {
+      "ProjectGuid": "629260fa-5658-416b-955b-0c10b680d53c",
+      "DisplayName": "WinFormsControlLibraryAscenseur",
+      "ColorIndex": 2
+    }
+  },
+  "NextColorIndex": 3
+}
