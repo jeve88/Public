@@ -1,0 +1,332 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{806E7486-736D-444D-9B9E-2E3C34B78827}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Cocotte</RootNamespace>
+    <AssemblyName>Cocotte</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Cocotte.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Serialisation.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\choix2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\carre.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\choix1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\carre - Copie.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rouge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\choixRouge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bulleHD.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bulleBD.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bulleHG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bulleBG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bulleHD_Rouge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cyan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\jaune.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\violet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bulleBD_Jaune.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bulleBD_Vert.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bulleBG_Orange.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bulleBG_Violet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bulleHD_Bleu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bulleHG_Cyan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bulleHG_Rose.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bleu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\orange.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rose.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vert.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Start.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Start_over.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\labelNbrLance.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\choixBleu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\choixCyan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\choixJaune.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\choixOrange.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\choixRose.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\choixVert.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\choixViolet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Restart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Restart_over.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mignaCyan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mignaBleu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mignaJaune.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mignaOrange.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mignaRose.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mignaRouge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mignaVert.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mignaViolet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mignaBleu_Hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mignaCyan_hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mignaJaune_Hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mignaOrange_Hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mignaRose_Hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mignaRouge_hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mignaVert_Hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mignaViolet_Hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bulle_Bleu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bulle_Cyan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bulle_Jaune.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bulle_Orange.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bulle_Rose.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bulle_Rouge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bulle_Vert.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bulle_Violet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Annuler.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Annuler_over.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Valider.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Valider_over.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\parametre.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\parametre_over.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\parametre_Over2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\effacer_cyan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\effacer_cyan1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\effacer_Jaune.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\effacer_rouge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\effacer_cyan2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\effacer_Bleu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\effacer_Orange.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\effacer_Rose.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\effacer_Vert.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\effacer_Violet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\effacer_Vert1.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

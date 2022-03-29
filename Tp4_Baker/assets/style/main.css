@@ -1,0 +1,290 @@
+:root {
+    --backgroundDark: #44474E;
+    --backgroundLight: #55575E;
+    --border: #242527;
+    --divTitle: #33373E;
+    --tableTitle: #293539;
+    --tableTr: #374046;
+    --tableHover: rgb(84, 86, 92);
+    --progressDark: #006400;
+    --progressLight: #ADFF2F;
+    --btnActif: #2a801f;
+    --btnDesactiv: #971515;
+    --btnActifHover: #40a533;
+    --btnDesactivHover: #bb2c2c;
+}
+
+html {
+    font-size: 62.5%; /* 16px * 62.5% = 10px */
+}
+
+body {
+    max-width: 900px;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.4rem; /* 1.6rem = 10 px * 1.6 = 16px */
+    color: white;
+    background: var(--backgroundDark);
+}
+
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;    
+    height: 10rem;
+    background-color: var(--backgroundDark);
+}
+
+table {
+    border-spacing: 0;
+    font-size: 1.5rem;
+}
+
+header h1 {
+    margin-top: 5px;
+    margin-left: 4rem;
+}
+
+header table {
+    width: 600px;
+    height: 65px;
+    margin-top: 5px;
+    margin-right: 4rem;
+    text-align: center;
+}
+
+header thead {
+    border: solid 1px black;
+    background: var(--tableTitle);
+}
+
+header tbody {
+    background: var(--tableTr);
+}
+
+div {
+    border: solid 1px black;
+}
+
+
+
+.divTitle {
+    background: var(--divTitle);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;    
+}
+
+.btnBoulangerie {
+    height: 35px;
+    width: 200px;
+    margin-right: 5%;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+h2 {
+    margin: 1rem;
+}
+
+.divContent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; 
+}
+
+#erreur {
+    height: 100px;
+    width: 200px;
+    color: red;
+}
+#erreur p{
+    text-align: center;
+    margin-top: 13px;
+}
+
+#erreur button{
+    margin-left: 175px;
+    margin-top: 2px;
+}
+
+#imgBoul {
+    transform: scaleX(-1);
+    height: 150px;
+    width: 150px;
+    margin-left: 2rem;
+}
+
+#boulangerie {
+    margin-bottom: 1rem;
+}
+
+#boulangerie table {
+    margin-right: 1rem;
+}
+
+#boulangerie tr {
+   margin: 2rem;
+}
+
+#boulangerie td:first-child {
+    width: 100px;
+}
+
+#boulangerie td:nth-child(2) {
+    text-align: right;
+    width: 120px;
+}
+#boulangerie td:nth-child(3) {
+    text-align: center;
+    width: 20px;
+}
+
+#boulangerie td:nth-child(4) {
+    text-align: center;
+    width: 35px;
+}
+
+#boulangerie td:nth-child(5) {
+    text-align: right;
+    width: 80px;
+}
+
+#boulangerie .divContent button{
+    color: #CCCCCC;
+   border-radius: 10px;
+}
+
+#commandes {
+    margin-bottom: 1rem;
+}
+
+#commandes thead {
+    background: var(--tableTitle);
+    height: 40px;    
+}
+
+#commandes tbody tr:nth-child(even) {
+    background: var(--tableTr);
+}
+
+#commandes td {
+    text-align: center;
+    height: 40px;
+    width: 80px;
+}
+#commandes tbody tr:hover {
+    background: var(--tableHover);
+}
+
+#commandes td:last-child {
+    text-align: left;
+    width: auto;
+}
+
+#commandes th:last-child {
+    text-align: left;
+    width: auto;
+}
+
+#commandes table {
+    width: 900px;
+}
+
+#commandes button {
+    height: 30px;  
+    width: 30px;  
+    margin-right: 10px;
+    color: white;
+}
+
+progress {
+    -webkit-appearance: none;
+     appearance: none;
+  
+    width: 300px;
+    height: 20px;
+  }
+
+article {
+    height:250px;
+    width: 900px;
+    overflow:auto;
+}
+
+th {
+    font-weight: normal;
+}
+
+#divTriche {
+    border: none;
+}
+
+
+
+/*  BUTTONS   */
+/**//**//**//**/
+
+button {
+    border: solid 1px black;
+    border-radius: 0;
+    background-color: var(--divTitle);
+}
+
+button:hover {
+    background-color: var(--backgroundLight);
+    cursor: pointer;
+}
+
+.boutonCache {
+    border: none;
+    border-radius: none;
+    height: 30px;
+    width: 200px;
+    background-color: var(--divTitle);
+}
+
+.boutonCache:hover {
+    cursor: default;
+    background-color: var(--divTitle);
+}
+
+#btnTriche, #btnCommandeAuto {
+    margin-left: 10px;
+    border-radius: 50%;
+    font-weight: bold;
+    background-color: var(--btnDesactiv);
+}
+
+#btnTriche:hover, #btnCommandeAuto:hover {
+    background-color: var(--btnDesactivHover);
+}
+
+
+
+#btnCommandeAutoActiver {
+    background-color: var(--btnActif);
+    margin-left: 10px;
+    border-radius: 50%;
+    font-weight: bold;
+}
+#btnCommandeAutoActiver:hover {
+    background-color: var(--btnActifHover);
+}
+
+#btnXActiv{
+    color: var(--btnActif);
+}
+
+#btnXDesactif{
+    color: black;
+}
+
+

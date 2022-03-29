@@ -10,6 +10,7 @@ namespace WinFormsAscenseur
         private bool porteOuverteIhm;
 
         Thread? t;
+        private bool finDeThreads;
 
         public Form1()
         {
@@ -19,10 +20,12 @@ namespace WinFormsAscenseur
             afficherEtat = false;
             porteOuverteIhm = false;
 
+            finDeThreads = false;
+
             monAscenseur.ChangementEtatPorte += ChangementEtatPorteIhm;
 
         }
-      
+
         private void MajIhm()
         {
             labelEtage.Text = monAscenseur.EtageCourant.NumEtage.ToString();
@@ -33,7 +36,20 @@ namespace WinFormsAscenseur
             button2.ForeColor = monAscenseur.demandesEtageInterne.Contains(2) ? Color.Red : Color.Black;
             button3.ForeColor = monAscenseur.demandesEtageInterne.Contains(3) ? Color.Red : Color.Black;
 
-            
+            if (monAscenseur.Etat.GetType() == typeof(Monte))
+            {
+                labelFlecheMonter.ForeColor = Color.Red;
+            }
+            else if (monAscenseur.Etat.GetType() == typeof(Descend))
+            {
+                labelFlecheDescendre.ForeColor = Color.Red;
+            }
+            else
+            {
+                labelFlecheMonter.ForeColor = SystemColors.ControlText;
+                labelFlecheDescendre.ForeColor = SystemColors.ControlText;
+            }
+
             if (afficherEtat)
             {
                 if (monAscenseur.Etat.GetType() == typeof(Monte))
@@ -103,7 +119,7 @@ namespace WinFormsAscenseur
         private void ThreadMethodOuvrirPorte()
         {
             int count = 0;
-            while (count < 50)
+            while (count < 50 && !finDeThreads)
             {
                 Thread.Sleep(20);
                 pictureBoxPorteG.Invoke(new MethodInvoker(delegate
@@ -121,7 +137,7 @@ namespace WinFormsAscenseur
         private void ThreadMethodFermerPorte()
         {
             int count = 0;
-            while (count < 50)
+            while (count < 50 && !finDeThreads)
             {
                 Thread.Sleep(20);
                 pictureBoxPorteG.Invoke(new MethodInvoker(delegate
@@ -136,5 +152,6 @@ namespace WinFormsAscenseur
                 count++;
             }
         }
+
     }
 }

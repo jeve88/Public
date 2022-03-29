@@ -1,0 +1,8 @@
+Mon messageCyan !
+Mon messageRouge !
+Mon messageViolet !
+Mon messageJaune !
+Mon messageRose !
+Mon messageBleu !
+Mon messageOrange !
+Mon messageVert !

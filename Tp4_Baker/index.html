@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/style/main.css">
+    <script src="assets/js/vue.global.js" defer></script>
+    <script src="assets/js/main.js" type="module"></script>
+</head>
+<body id="app">
+    <header>
+        <h1>Le Boulanger</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Or gagné</th>
+                    <th>Or dépensé</th>
+                    <th>Farine produite</th>
+                    <th>Baguettes produites</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{ orGagne }}</td>
+                    <td>{{ orDepense }}</td>
+                    <td>{{ simplifierSansDecimal(boulangerie.farineProduite) }}</td>
+                    <td>{{ simplifierSansDecimal(boulangerie.baguettesProduites) }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </header>
+
+    <main>
+        
+
+        <section id="boulangerie">
+            <div class="divTitle">
+                <h2>Boulangerie</h2>
+
+                <div v-if="boulangerie.tricheActive" id="divTriche">
+                    <button :id="id1000" @click="modifierVitesse" data-tab="1000">x1</button>
+                    <button :id="id500" @click="modifierVitesse" data-tab="500">x2</button>
+                    <button :id="id300" @click="modifierVitesse" data-tab="300">x3</button>
+                    <button :id="id150" @click="modifierVitesse" data-tab="150">x4</button>
+                    <button :id="id50" @click="modifierVitesse" data-tab="50">x5</button>
+                    <button v-bind:id="idTest" @click="commandeAuto" id="btnCommandeAuto">Auto</button>
+                    <button @click="activerTriche" id="btnTriche">X</button>
+                </div>
+                <button v-else @click="activerTriche" class="boutonCache"></button>
+                
+                <button v-if="boulangerie.etatBoulangerie == 'ouverte'" @click="changerEtatBoulangerie" class="btnBoulangerie">Fermer la boulangerie</button>
+                <button v-if="boulangerie.etatBoulangerie == 'fermer'" @click="changerEtatBoulangerie" class="btnBoulangerie">Ouvrir la boulangerie</button>
+                <button v-if="boulangerie.etatBoulangerie == 'faillite'" class="btnBoulangerie">La boulangerie a fait faillite</button>
+            </div>
+            <div class="divContent">
+                <img src="./assets/img/baker.jpg" alt="La boulangerie" id="imgBoul">
+
+                <div v-if="msgErreur != null" id="erreur">
+                    <button @click="fermerErreur">X</button>
+                    <p>{{ msgErreur }}</p> 
+                </div>
+
+                <table>
+                    <tr>
+                        <td>Niveau</td>
+                        <td>{{ boulangerie.lvlBoulangerie }}</td>
+                        <td>&#9889;</td>
+                        <td><button @click="lvlSuivant">+</button></td>
+                        <td>{{ simplifierSansDecimal(boulangerie.prixLvlSuivant) }}&#128176;</td>
+                    </tr>
+                    <tr>
+                        <td>Moulins</td>
+                        <td>{{ boulangerie.nbrMoulins }}</td>
+                        <td>&#9967;</td>
+                        <td><button @click="acheterMoulin()">+</button></td>
+                        <td>{{ simplifierSansDecimal(boulangerie.prixMoulin) }}&#128176;</td>
+                    </tr>     
+                    <tr>
+                        <td>Or</td>
+                        <td>{{ or }}</td>
+                        <td>&#128176;</td>
+                    </tr> 
+                    <tr>
+                        <td>Farine</td>
+                        <td>{{ boulangerie.farine }}</td>
+                        <td>&#129356;</td>
+                    </tr>
+                    <tr>
+                        <td>Baguettes</td>
+                        <td>{{ boulangerie.baguettes }}</td>
+                        <td>&#129366;</td>
+                    </tr>              
+                </table>
+            </div>
+        </section>
+
+        <section id="commandes">
+            <div class="divTitle">
+                <h2>Commandes</h2>
+            </div>
+            <div class="divContent">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>&#128242;</th>
+                            <th>&#129366;</th>
+                            <th>&#128176;/&#129366;</th>
+                            <th>&#128176;&#128176;&#128176;</th>
+                            <th>&#8986;</th>
+                            <th>&#128483;</th>
+                        </tr>
+                    </thead>      
+                    
+                    <tbody>
+                        <tr v-for="commande in boulangerie.commandes">
+                            <td>{{ commande.id }}</td>
+                            <td>{{ commande.nbrBaguettes }}</td>
+                            <td>{{ commande.prixBaguette }}</td>
+                            <td>{{ commande.prixTotal.toFixed(2) }}</td>
+                            <td>{{ commande.temps }}</td>
+
+                            <td v-if="commande.statutCommande == 'nouvelleCommande'">
+                                <button @click="eventAccepterCommande" :data-tab="commande.id">Y</button>
+                                <button @click="eventRefuserCommande" :data-tab="commande.id">N</button>
+                            </td>
+
+                            <td v-else-if="commande.statutCommande == 'acceptee'">
+                                <progress id="file" :max="commande.nbrBaguettes" value = 0></progress>
+                            0\{{ commande.nbrBaguettes }}
+                            </td> 
+
+                            <td v-else-if="commande.statutCommande == 'enPreparation'">
+                                <progress id="file" :max="commande.nbrBaguettes" :value="boulangerie.baguettes">                                    
+                                </progress> {{ boulangerie.baguettes }}\{{ commande.nbrBaguettes }}
+                            </td>
+
+                            <td v-else-if="commande.statutCommande == 'annulee'">
+                                Commande annulée !
+                            </td>
+
+                            <td v-else-if="commande.statutCommande == 'terminee'">
+                                Commande terminée !
+                            </td>
+                            <td v-else>
+                                En attente...
+                            </td>
+                            
+                        </tr>                    
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <section id="log">
+            <div class="divTitle">
+                <h2>Log</h2>
+            </div>
+            <div class="divContent">
+               <article>
+                   <ul>
+                       <li v-for="msg in log.log">{{ msg }}</li>
+                   </ul>
+               </article>
+            </div>
+        </section>
+        
+    </footer>
+</body>
+</html>

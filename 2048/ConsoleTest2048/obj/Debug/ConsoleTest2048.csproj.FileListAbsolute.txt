@@ -1,0 +1,17 @@
+C:\Users\Stagiaire.CRM-UC-3931\source\repos\2048\ConsoleTest2048\bin\Debug\ConsoleTest2048.exe.config
+C:\Users\Stagiaire.CRM-UC-3931\source\repos\2048\ConsoleTest2048\bin\Debug\ConsoleTest2048.exe
+C:\Users\Stagiaire.CRM-UC-3931\source\repos\2048\ConsoleTest2048\bin\Debug\ConsoleTest2048.pdb
+C:\Users\Stagiaire.CRM-UC-3931\source\repos\2048\ConsoleTest2048\obj\Debug\ConsoleTest2048.csproj.CoreCompileInputs.cache
+C:\Users\Stagiaire.CRM-UC-3931\source\repos\2048\ConsoleTest2048\obj\Debug\ConsoleTest2048.exe
+C:\Users\Stagiaire.CRM-UC-3931\source\repos\2048\ConsoleTest2048\obj\Debug\ConsoleTest2048.pdb
+C:\Users\Stagiaire.CRM-UC-3931\source\repos\2048\ConsoleTest2048\obj\Debug\ConsoleTest2048.csprojAssemblyReference.cache
+C:\Users\Stagiaire.CRM-UC-3931\Documents\GitHub\objet\2048\ConsoleTest2048\bin\Debug\ConsoleTest2048.exe.config
+C:\Users\Stagiaire.CRM-UC-3931\Documents\GitHub\objet\2048\ConsoleTest2048\bin\Debug\ConsoleTest2048.exe
+C:\Users\Stagiaire.CRM-UC-3931\Documents\GitHub\objet\2048\ConsoleTest2048\bin\Debug\ConsoleTest2048.pdb
+C:\Users\Stagiaire.CRM-UC-3931\Documents\GitHub\objet\2048\ConsoleTest2048\bin\Debug\ClassLibrary_2048.dll
+C:\Users\Stagiaire.CRM-UC-3931\Documents\GitHub\objet\2048\ConsoleTest2048\bin\Debug\ClassLibrary_2048.pdb
+C:\Users\Stagiaire.CRM-UC-3931\Documents\GitHub\objet\2048\ConsoleTest2048\obj\Debug\ConsoleTest2048.csprojAssemblyReference.cache
+C:\Users\Stagiaire.CRM-UC-3931\Documents\GitHub\objet\2048\ConsoleTest2048\obj\Debug\ConsoleTest2048.csproj.CoreCompileInputs.cache
+C:\Users\Stagiaire.CRM-UC-3931\Documents\GitHub\objet\2048\ConsoleTest2048\obj\Debug\ConsoleTest2048.csproj.CopyComplete
+C:\Users\Stagiaire.CRM-UC-3931\Documents\GitHub\objet\2048\ConsoleTest2048\obj\Debug\ConsoleTest2048.exe
+C:\Users\Stagiaire.CRM-UC-3931\Documents\GitHub\objet\2048\ConsoleTest2048\obj\Debug\ConsoleTest2048.pdb

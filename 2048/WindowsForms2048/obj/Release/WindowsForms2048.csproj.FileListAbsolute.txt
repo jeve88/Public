@@ -1,0 +1,13 @@
+C:\Users\Stagiaire.CRM-UC-3931\Documents\GitHub\objet\2048\WindowsForms2048\bin\Release\WindowsForms2048.exe.config
+C:\Users\Stagiaire.CRM-UC-3931\Documents\GitHub\objet\2048\WindowsForms2048\bin\Release\WindowsForms2048.exe
+C:\Users\Stagiaire.CRM-UC-3931\Documents\GitHub\objet\2048\WindowsForms2048\bin\Release\WindowsForms2048.pdb
+C:\Users\Stagiaire.CRM-UC-3931\Documents\GitHub\objet\2048\WindowsForms2048\bin\Release\ClassLibrary_2048.dll
+C:\Users\Stagiaire.CRM-UC-3931\Documents\GitHub\objet\2048\WindowsForms2048\bin\Release\ClassLibrary_2048.pdb
+C:\Users\Stagiaire.CRM-UC-3931\Documents\GitHub\objet\2048\WindowsForms2048\obj\Release\WindowsForms2048.csprojAssemblyReference.cache
+C:\Users\Stagiaire.CRM-UC-3931\Documents\GitHub\objet\2048\WindowsForms2048\obj\Release\WindowsForms2048.Game.resources
+C:\Users\Stagiaire.CRM-UC-3931\Documents\GitHub\objet\2048\WindowsForms2048\obj\Release\WindowsForms2048.Properties.Resources.resources
+C:\Users\Stagiaire.CRM-UC-3931\Documents\GitHub\objet\2048\WindowsForms2048\obj\Release\WindowsForms2048.csproj.GenerateResource.cache
+C:\Users\Stagiaire.CRM-UC-3931\Documents\GitHub\objet\2048\WindowsForms2048\obj\Release\WindowsForms2048.csproj.CoreCompileInputs.cache
+C:\Users\Stagiaire.CRM-UC-3931\Documents\GitHub\objet\2048\WindowsForms2048\obj\Release\WindowsForms2048.csproj.CopyComplete
+C:\Users\Stagiaire.CRM-UC-3931\Documents\GitHub\objet\2048\WindowsForms2048\obj\Release\WindowsForms2048.exe
+C:\Users\Stagiaire.CRM-UC-3931\Documents\GitHub\objet\2048\WindowsForms2048\obj\Release\WindowsForms2048.pdb

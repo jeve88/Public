@@ -1,0 +1,7 @@
+C:\Users\Stagiaire.CRM-UC-3931\Documents\GitHub\objet\POO\Casse-Briques\Casse-Briques\bin\Debug\Casse-Briques.exe.config
+C:\Users\Stagiaire.CRM-UC-3931\Documents\GitHub\objet\POO\Casse-Briques\Casse-Briques\bin\Debug\Casse-Briques.exe
+C:\Users\Stagiaire.CRM-UC-3931\Documents\GitHub\objet\POO\Casse-Briques\Casse-Briques\bin\Debug\Casse-Briques.pdb
+C:\Users\Stagiaire.CRM-UC-3931\Documents\GitHub\objet\POO\Casse-Briques\Casse-Briques\obj\Debug\Casse-Briques.csprojAssemblyReference.cache
+C:\Users\Stagiaire.CRM-UC-3931\Documents\GitHub\objet\POO\Casse-Briques\Casse-Briques\obj\Debug\Casse-Briques.csproj.CoreCompileInputs.cache
+C:\Users\Stagiaire.CRM-UC-3931\Documents\GitHub\objet\POO\Casse-Briques\Casse-Briques\obj\Debug\Casse-Briques.exe
+C:\Users\Stagiaire.CRM-UC-3931\Documents\GitHub\objet\POO\Casse-Briques\Casse-Briques\obj\Debug\Casse-Briques.pdb

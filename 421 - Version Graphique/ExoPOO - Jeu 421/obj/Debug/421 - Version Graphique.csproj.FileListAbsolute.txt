@@ -1,0 +1,7 @@
+C:\Users\Stagiaire.CRM-UC-3931\Documents\GitHub\objet\POO\421 - Version Graphique\ExoPOO - Jeu 421\bin\Debug\421 - Version Graphique.exe.config
+C:\Users\Stagiaire.CRM-UC-3931\Documents\GitHub\objet\POO\421 - Version Graphique\ExoPOO - Jeu 421\bin\Debug\421 - Version Graphique.exe
+C:\Users\Stagiaire.CRM-UC-3931\Documents\GitHub\objet\POO\421 - Version Graphique\ExoPOO - Jeu 421\bin\Debug\421 - Version Graphique.pdb
+C:\Users\Stagiaire.CRM-UC-3931\Documents\GitHub\objet\POO\421 - Version Graphique\ExoPOO - Jeu 421\obj\Debug\421 - Version Graphique.csprojAssemblyReference.cache
+C:\Users\Stagiaire.CRM-UC-3931\Documents\GitHub\objet\POO\421 - Version Graphique\ExoPOO - Jeu 421\obj\Debug\421 - Version Graphique.csproj.CoreCompileInputs.cache
+C:\Users\Stagiaire.CRM-UC-3931\Documents\GitHub\objet\POO\421 - Version Graphique\ExoPOO - Jeu 421\obj\Debug\421 - Version Graphique.exe
+C:\Users\Stagiaire.CRM-UC-3931\Documents\GitHub\objet\POO\421 - Version Graphique\ExoPOO - Jeu 421\obj\Debug\421 - Version Graphique.pdb

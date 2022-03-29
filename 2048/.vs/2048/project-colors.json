@@ -1,0 +1,21 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "f1e03b77-0497-4bbe-9fc6-0773d95bec12": {
+      "ProjectGuid": "f1e03b77-0497-4bbe-9fc6-0773d95bec12",
+      "DisplayName": "WindowsForms2048",
+      "ColorIndex": 0
+    },
+    "b6116e6f-8912-47b3-9e94-fa9fd11a081b": {
+      "ProjectGuid": "b6116e6f-8912-47b3-9e94-fa9fd11a081b",
+      "DisplayName": "ConsoleTest2048",
+      "ColorIndex": 1
+    },
+    "f5a8545b-8839-417f-a31d-46ddf4d3066b": {
+      "ProjectGuid": "f5a8545b-8839-417f-a31d-46ddf4d3066b",
+      "DisplayName": "ClassLibrary_2048",
+      "ColorIndex": 2
+    }
+  },
+  "NextColorIndex": 3
+}

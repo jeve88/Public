@@ -30,6 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panelAscenseur = new System.Windows.Forms.Panel();
+            this.labelFlecheDescendre = new System.Windows.Forms.Label();
+            this.labelFlecheMonter = new System.Windows.Forms.Label();
             this.buttonEtages = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -44,9 +46,8 @@
             this.pictureBox17 = new System.Windows.Forms.PictureBox();
             this.pictureBoxPorteD = new System.Windows.Forms.PictureBox();
             this.pictureBoxPorteG = new System.Windows.Forms.PictureBox();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panelAscenseur.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
@@ -58,6 +59,8 @@
             // 
             // panelAscenseur
             // 
+            this.panelAscenseur.Controls.Add(this.labelFlecheDescendre);
+            this.panelAscenseur.Controls.Add(this.labelFlecheMonter);
             this.panelAscenseur.Controls.Add(this.buttonEtages);
             this.panelAscenseur.Controls.Add(this.button3);
             this.panelAscenseur.Controls.Add(this.button2);
@@ -77,6 +80,30 @@
             this.panelAscenseur.Name = "panelAscenseur";
             this.panelAscenseur.Size = new System.Drawing.Size(396, 513);
             this.panelAscenseur.TabIndex = 0;
+            // 
+            // labelFlecheDescendre
+            // 
+            this.labelFlecheDescendre.AutoSize = true;
+            this.labelFlecheDescendre.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.labelFlecheDescendre.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelFlecheDescendre.Location = new System.Drawing.Point(220, 20);
+            this.labelFlecheDescendre.Margin = new System.Windows.Forms.Padding(3);
+            this.labelFlecheDescendre.Name = "labelFlecheDescendre";
+            this.labelFlecheDescendre.Size = new System.Drawing.Size(28, 25);
+            this.labelFlecheDescendre.TabIndex = 15;
+            this.labelFlecheDescendre.Text = "▼";
+            // 
+            // labelFlecheMonter
+            // 
+            this.labelFlecheMonter.AutoSize = true;
+            this.labelFlecheMonter.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.labelFlecheMonter.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelFlecheMonter.Location = new System.Drawing.Point(147, 20);
+            this.labelFlecheMonter.Margin = new System.Windows.Forms.Padding(3);
+            this.labelFlecheMonter.Name = "labelFlecheMonter";
+            this.labelFlecheMonter.Size = new System.Drawing.Size(28, 25);
+            this.labelFlecheMonter.TabIndex = 14;
+            this.labelFlecheMonter.Text = "▲";
             // 
             // buttonEtages
             // 
@@ -239,15 +266,6 @@
             this.pictureBoxPorteG.TabIndex = 6;
             this.pictureBoxPorteG.TabStop = false;
             // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // timer2
-            // 
-            this.timer2.Interval = 10;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
@@ -256,6 +274,11 @@
             this.pictureBox1.Size = new System.Drawing.Size(333, 433);
             this.pictureBox1.TabIndex = 13;
             this.pictureBox1.TabStop = false;
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Form1
             // 
@@ -290,12 +313,13 @@
         private PictureBox pictureBoxPorteG;
         private System.Windows.Forms.Timer timer1;
         private Button buttonEtages;
-        private System.Windows.Forms.Timer timer2;
         private Button buttonEtat;
         private Label labelEtat;
         private PictureBox pictureBox19;
         private PictureBox pictureBox18;
         private PictureBox pictureBox17;
         private PictureBox pictureBox1;
+        private Label labelFlecheDescendre;
+        private Label labelFlecheMonter;
     }
 }
