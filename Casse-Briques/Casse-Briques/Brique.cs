@@ -11,6 +11,10 @@ namespace Casse_Briques
         public int Xpos { get; private set; }
         public int Ypos { get; private set; }
         public ConsoleColor Color { get; private set; }
+        public ConsoleColor Color2 { get; private set; } // pour doubleTouch
+        public bool doubleTouche;
+        public bool bonus;
+        public int spriteBonus = 1;
 
         public Brique() { }
         public Brique(int _Xpos, int _Ypos, ConsoleColor _color)
@@ -18,6 +22,44 @@ namespace Casse_Briques
             Xpos = _Xpos;
             Ypos = _Ypos;
             Color = _color;
+            doubleTouche = false;
+        }
+
+        public Brique(int _Xpos, int _Ypos, ConsoleColor _color, bool _doubleTouche)
+        {
+            Xpos = _Xpos;
+            Ypos = _Ypos;
+            Color = ConsoleColor.DarkGray;
+            Color2 = _color;
+            doubleTouche = _doubleTouche;
+        }
+
+        public Brique(int _Xpos, int _Ypos, ConsoleColor _color, bool _doubleTouche, bool _bonus)
+        {
+            Xpos = _Xpos;
+            Ypos = _Ypos;
+            Color = _color;
+            Color2 = _color;
+            doubleTouche = _doubleTouche;
+            bonus = _bonus;
+        }
+
+        public void premiereTouche()
+        {
+            doubleTouche = false;
+            Color = Color2;
+            Dessiner();
+        }
+
+        public void bonusDown()
+        {
+            Effacer();
+            Ypos++;
+            switch (spriteBonus)
+            {
+                case 1: Dessiner("▒▒▒▒▒▒"); spriteBonus = 2; break;
+                case 2: Dessiner("▓▓▓▓▓▓"); spriteBonus = 1; break;
+            }
         }
 
         public void Dessiner()
@@ -27,6 +69,15 @@ namespace Casse_Briques
             Console.Write("██████");
             Console.ResetColor();
         }
+
+        public void Dessiner(string _sprite)
+        {
+            Console.ForegroundColor = Color;
+            Console.SetCursorPosition(Xpos - 3, Ypos);
+            Console.Write(_sprite);
+            Console.ResetColor();
+        }
+
         public void Effacer()
         {
             Console.SetCursorPosition(Xpos - 3, Ypos);
@@ -47,7 +98,7 @@ namespace Casse_Briques
             };
             for (int i = 0; i < 7; i++)
             {
-                if (tabPos[i, 0] == _balle.Ypos && tabPos[i, 1] == _balle.Xpos)
+                if (tabPos[i, 0] == _balle.yPos && tabPos[i, 1] == _balle.xPos)
                 {
                     Effacer();
                     _balle.mouvement = false;
@@ -72,7 +123,7 @@ namespace Casse_Briques
             };
             for (int i = 0; i < 7; i++)
             {
-                if (tabPos[i, 0] == _balle.Ypos && tabPos[i, 1] == _balle.Xpos)
+                if (tabPos[i, 0] == _balle.yPos && tabPos[i, 1] == _balle.xPos)
                 {
                     Effacer();
                     _balle.mouvement = true;
@@ -85,65 +136,65 @@ namespace Casse_Briques
         public bool Bors(Balle _balle)
         {
             bool test = false;
-            if (_balle.mouvement && _balle.Xangle<0)
+            if (_balle.mouvement && _balle.xAngle < 0)
             {
-                if (Ypos == _balle.Ypos && Xpos + 4 == _balle.Xpos)
+                if (Ypos == _balle.yPos && Xpos + 4 == _balle.xPos)
                 {
                     Effacer();
                     test = true;
-                    _balle.Xangle = -_balle.Xangle;
+                    _balle.xAngle = -_balle.xAngle;
                 }
-                else if (Ypos == _balle.Ypos && Xpos + 3 == _balle.Xpos)
+                else if (Ypos == _balle.yPos && Xpos + 3 == _balle.xPos)
                 {
                     Effacer();
                     test = true;
-                    _balle.Xangle = -_balle.Xangle;
+                    _balle.xAngle = -_balle.xAngle;
                 }
             }
-            else if (!_balle.mouvement && _balle.Xangle < 0)  // A checker
+            else if (!_balle.mouvement && _balle.xAngle < 0)  // A checker
             {
                 // Console.Write(_balle.Xpos);
-                if (Ypos == _balle.Ypos && Xpos + 4 == _balle.Xpos)
+                if (Ypos == _balle.yPos && Xpos + 4 == _balle.xPos)
                 {
                     Effacer();
                     test = true;
-                    _balle.Xangle = -_balle.Xangle;
+                    _balle.xAngle = -_balle.xAngle;
                 }
-                else if (Ypos == _balle.Ypos && Xpos + 3 == _balle.Xpos)
+                else if (Ypos == _balle.yPos && Xpos + 3 == _balle.xPos)
                 {
                     Effacer();
                     test = true;
-                    _balle.Xangle = -_balle.Xangle;
-                }
-            }
-            if (_balle.mouvement && _balle.Xangle > 0)
-            {
-                if (Ypos == _balle.Ypos && Xpos -4 == _balle.Xpos)
-                {
-                    Effacer();
-                    test = true;
-                    _balle.Xangle = -_balle.Xangle;
-                }
-                else if (Ypos == _balle.Ypos && Xpos - 3 == _balle.Xpos)
-                {
-                    Effacer();
-                    test = true;
-                    _balle.Xangle = -_balle.Xangle;
+                    _balle.xAngle = -_balle.xAngle;
                 }
             }
-            else if (!_balle.mouvement && _balle.Xangle > 0)  // A checker
+            if (_balle.mouvement && _balle.xAngle > 0)
             {
-                if (Ypos == _balle.Ypos && Xpos - 4 == _balle.Xpos)
+                if (Ypos == _balle.yPos && Xpos - 4 == _balle.xPos)
                 {
                     Effacer();
                     test = true;
-                    _balle.Xangle = -_balle.Xangle;
+                    _balle.xAngle = -_balle.xAngle;
                 }
-                else if (Ypos == _balle.Ypos && Xpos - 3 == _balle.Xpos)
+                else if (Ypos == _balle.yPos && Xpos - 3 == _balle.xPos)
                 {
                     Effacer();
                     test = true;
-                    _balle.Xangle = -_balle.Xangle;
+                    _balle.xAngle = -_balle.xAngle;
+                }
+            }
+            else if (!_balle.mouvement && _balle.xAngle > 0)  // A checker
+            {
+                if (Ypos == _balle.yPos && Xpos - 4 == _balle.xPos)
+                {
+                    Effacer();
+                    test = true;
+                    _balle.xAngle = -_balle.xAngle;
+                }
+                else if (Ypos == _balle.yPos && Xpos - 3 == _balle.xPos)
+                {
+                    Effacer();
+                    test = true;
+                    _balle.xAngle = -_balle.xAngle;
                 }
             }
             return test;

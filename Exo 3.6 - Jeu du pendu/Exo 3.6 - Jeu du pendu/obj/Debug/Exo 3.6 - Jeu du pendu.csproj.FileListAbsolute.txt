@@ -1,0 +1,8 @@
+C:\Users\Stagiaire.CRM-UC-3931\Documents\GitHub\Public\Exo 3.6 - Jeu du pendu\Exo 3.6 - Jeu du pendu\bin\Debug\Exo 3.6 - Jeu du pendu.exe.config
+C:\Users\Stagiaire.CRM-UC-3931\Documents\GitHub\Public\Exo 3.6 - Jeu du pendu\Exo 3.6 - Jeu du pendu\bin\Debug\Exo 3.6 - Jeu du pendu.exe
+C:\Users\Stagiaire.CRM-UC-3931\Documents\GitHub\Public\Exo 3.6 - Jeu du pendu\Exo 3.6 - Jeu du pendu\bin\Debug\Exo 3.6 - Jeu du pendu.pdb
+C:\Users\Stagiaire.CRM-UC-3931\Documents\GitHub\Public\Exo 3.6 - Jeu du pendu\Exo 3.6 - Jeu du pendu\obj\Debug\Exo 3.6 - Jeu du pendu.csproj.AssemblyReference.cache
+C:\Users\Stagiaire.CRM-UC-3931\Documents\GitHub\Public\Exo 3.6 - Jeu du pendu\Exo 3.6 - Jeu du pendu\obj\Debug\Exo 3.6 - Jeu du pendu.csproj.SuggestedBindingRedirects.cache
+C:\Users\Stagiaire.CRM-UC-3931\Documents\GitHub\Public\Exo 3.6 - Jeu du pendu\Exo 3.6 - Jeu du pendu\obj\Debug\Exo 3.6 - Jeu du pendu.csproj.CoreCompileInputs.cache
+C:\Users\Stagiaire.CRM-UC-3931\Documents\GitHub\Public\Exo 3.6 - Jeu du pendu\Exo 3.6 - Jeu du pendu\obj\Debug\Exo 3.6 - Jeu du pendu.exe
+C:\Users\Stagiaire.CRM-UC-3931\Documents\GitHub\Public\Exo 3.6 - Jeu du pendu\Exo 3.6 - Jeu du pendu\obj\Debug\Exo 3.6 - Jeu du pendu.pdb

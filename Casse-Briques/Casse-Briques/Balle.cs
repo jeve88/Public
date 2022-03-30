@@ -9,98 +9,144 @@ namespace Casse_Briques
 {
     class Balle
     {
-        public int Xpos = Program.xPos;
-        public int Ypos = Program.yPos-2;
-        public int Xangle = 2;
+        public int xPos = Program.xPos;
+        public int yPos = Program.yPos - 2;
+        public int xAngle = 2;
         public bool mouvement = true; // true:haut  false:bas 
         public bool gameOver = false;
 
         public Balle() { }
+        public Balle(int _xPos, int _yPos, int _angle, bool _mouvement)
+        {
+            xPos = _xPos;
+            yPos = _yPos;
+            xAngle = _angle;
+            mouvement = _mouvement;
+        }
         public void Dessiner()
         {
-            Console.ForegroundColor = ConsoleColor.DarkYellow;
-            Console.SetCursorPosition(Xpos - 1, Ypos);
-            Console.Write("██");
-            Console.ResetColor();
+            try
+            {
+                Console.ForegroundColor = ConsoleColor.DarkYellow;
+                Console.SetCursorPosition(xPos - 1, yPos);
+                Console.Write("██");
+                Console.ResetColor();
+            }
+            catch (Exception)
+            {
+                Console.ResetColor();
+            }
+
         }
         public void Effacer()
         {
-            Console.SetCursorPosition(Xpos - 1, Ypos);
-            Console.Write("  ");
+            try
+            {
+                Console.SetCursorPosition(xPos - 1, yPos);
+                Console.Write("  ");
+            }
+            catch (Exception)
+            {
+
+            }
+
         }
         public void VersLeHaut()
         {
-            if (Xpos <= 83 && Xpos >= 5)
+            try
             {
-                Effacer();
-            }
-            Xpos += Xangle;
-            Ypos -= 1;
-            if (Xpos <= 83 && Xpos >= 5)
-            {
-                Dessiner();
-            }
-
-            if (Ypos == 2)
-            {
-                mouvement = false;
-            }
-
-            if (Xpos <= 5 || Xpos >= 83)
-            {
-                Xangle = -Xangle;
-            }
-        }
-        public void VersLeBas(int _xBar)
-        {
-            if (Xpos <= 83 && Xpos >= 5)
-            {
-                Effacer();
-            }
-            Xpos += Xangle;
-            Ypos += 1;
-            if (Xpos <= 83 && Xpos >= 5)
-            {
-                Dessiner();
-            }
-            if (Ypos == 29)
-            {
-                if (_xBar >= Xpos - 5 && _xBar <= Xpos + 5)
+                if (xPos <= 83 && xPos >= 5)
                 {
-                    mouvement = true;
-                    Xangle = Xpos - _xBar;
+                    Effacer();
+                }
+                xPos += xAngle;
+                yPos -= 1;
+                if (xPos <= 83 && xPos >= 5)
+                {
+                    Dessiner();
+                }
+
+                if (yPos == 2)
+                {
+                    mouvement = false;
+                }
+
+                if (xPos <= 5 || xPos >= 83)
+                {
+                    xAngle = -xAngle;
+                }
+            }
+            catch (Exception)
+            {
+            }
+
+        }
+        public void VersLeBas(int _xBar, int _largBarre)
+        {
+            try
+            {
+                if (xPos <= 83 && xPos >= 5)
+                {
+                    Effacer();
+                }
+                xPos += xAngle;
+                yPos += 1;
+                if (xPos <= 83 && xPos >= 5)
+                {
+                    Dessiner();
+                }
+                if (yPos == 29)
+                {
+                    if (_xBar >= xPos - (_largBarre / 2) && _xBar <= xPos + (_largBarre / 2))
+                    {
+                        mouvement = true;
+                        xAngle = xPos - _xBar;
+                        if (xAngle < -4) xAngle = -4;
+                        if (xAngle > 4) xAngle = 4;
+                    }
+                    else
+                    {
+                        Effacer();
+                        xPos += xAngle;
+                        yPos += 1;
+                        Dessiner();
+                        Thread.Sleep(50);
+                        Effacer();
+                        xPos += xAngle;
+                        yPos += 1;
+                        Dessiner();
+                        Thread.Sleep(500);
+                        Effacer();
+                        gameOver = true;
+                    }
+                }
+                if (xPos <= 5 || xPos >= 83)
+                {
+                    xAngle = -xAngle;
+                }
+            }
+            catch (Exception)
+            {
+            }
+
+        }
+        public void Mouvement(int _xBar, int _largBarre)
+        {
+            try
+            {
+                if (mouvement)
+                {
+                    VersLeHaut();
                 }
                 else
                 {
-                    Effacer();
-                    Xpos += Xangle;
-                    Ypos += 1;
-                    Dessiner();
-                    Thread.Sleep(50);
-                    Effacer();
-                    Xpos += Xangle;
-                    Ypos += 1;
-                    Dessiner();
-                    Thread.Sleep(500);
-                    Effacer();
-                    gameOver = true;
+                    VersLeBas(_xBar, _largBarre);
                 }
             }
-            if (Xpos <= 5 || Xpos >= 83)
+            catch (Exception)
             {
-                Xangle = -Xangle;
             }
-        }
-        public void Mouvement(int _xBar)
-        {
-            if (mouvement)
-            {
-                VersLeHaut();
-            }
-            else
-            {
-                VersLeBas(_xBar);
-            }
+
         }
     }
 }
